@@ -1,0 +1,320 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5aa0 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*for main box - login conatiner */
+.login-Container {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #daa520;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 30px;
+  background-color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slidUp 0.8s ease-out;
+}
+
+/* logo styling */
+.login-Container img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+  transition: transform 0.3s ease;
+  animation: slideDown 0.8s ease-out 0.1s both;
+}
+.login-Container img:hover {
+  transform: scale(1.08);
+}
+
+/*style for h2 */
+.login-Container h2 {
+  color: #1e3a5f;
+  font-size: 24px;
+  margin: 0 0 30px 0;
+  text-align: center;
+  font-weight: 600;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+/* style for label and input */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 10px;
+  width: 100%;
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
+.input-group label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3a5f;
+  letter-spacing: 0.5px;
+
+}
+.input-group input {
+  width: 500px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+.input-group input:focus {
+  outline: none;
+  border-color: #daa520;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(30, 58, 95, 0.3);
+  transform: translateY(-2px);
+}
+.input-group input ::placeholder {
+  color: #999;
+}
+
+/* Style for checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin: 10px;
+  justify-content: flex-start;
+  animation: fadeIn 0.8s ease-out 0.4s both;
+}
+.checkbox-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.checkbox-group label:hover {
+  color: #1e3a5f;
+}
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #1e3a5f;
+}
+
+/* styling for forgot passwaord */
+.forgot-password {
+  text-align: right;
+  width: 100%;
+  animation: fadeIn 0.8s ease-out 0.45s both;
+}
+.forgot-password a {
+  color: #1e3a5f;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.forgot-password a:hover {
+  color: #daa520;
+  text-decoration: underline;
+}
+
+/* style for button */
+button {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  background-color: #1e3a5f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out 0.5s both;
+}
+button:hover {
+  background-color: #152a47;
+  color: white;
+  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.4);
+  transform: translateY(-2px);
+}
+button:active {
+  transform: translateY(0);
+}
+
+/* styling for sign */
+.signup-section {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  animation: fadeIn 0.8s ease-out 0.6s both;
+}
+.signup-section p {
+  color: #666;
+  font-size: 15px;
+  margin: 0;
+}
+.signup-section a {
+  color: #1e3a5f; /* ✅ UET blue */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.signup-section a:hover {
+  color: #daa520;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+ 
+  .login-Container {
+    width: 100%;
+    max-width: 100%;
+    padding: 25px 20px;
+    border-radius: 10px;
+   box-sizing: border-box;
+  }
+ 
+  .login-Container img {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 15px;
+  }
+ 
+  .login-Container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+ 
+  .login-form {
+    gap: 15px;
+  }
+ 
+  .input-group {
+    margin: 8px;
+    gap: 6px;
+  }
+ 
+  .input-group label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+ 
+  .input-group input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+ 
+  .checkbox-group {
+    margin: 8px;
+    gap: 8px;
+  }
+ 
+  .checkbox-group label {
+    font-size: 13px;
+  }
+ 
+  .checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+ 
+  .forgot-password {
+    padding: 0 8px;
+  }
+ 
+  .forgot-password a {
+    font-size: 12px;
+  }
+ 
+  button {
+    padding: 10px 12px;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+ 
+  .signup-section {
+    margin-top: 20px;
+    padding-top: 15px;
+  }
+ 
+  .signup-section p {
+    font-size: 13px;
+  }
+ 
+  .signup-section a {
+    font-weight: 600;
+  }
+}
+
